@@ -83,7 +83,3 @@
 [전체 워크북 실습 자료 보기](cisco-l2-switching-project.pdf)
 
 > 위 자료는 4인 팀이 함께 진행한 워크북 전체 실습 내용을 담고 있습니다. 본인이 실제로 담당한 범위는 위 "담당 범위" 및 config 파일 기준으로 확인하실 수 있습니다.
-
----
-
-> IaC 자동화 경험은 [Terraform 프로젝트](https://github.com/gyu2001/aws-infra-automation-terraform)에서 별도로 확인하실 수 있습니다. 이 프로젝트는 CLI 기반 네트워크 장비 설정 실습으로 진행했습니다.
