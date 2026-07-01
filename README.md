@@ -1,6 +1,6 @@
 # Cisco L2 Switching Project
 
-4인 팀 CCIE 워크북 기반 실습에서 Bridging and Switching(VTP, Trunk, EtherChannel, MST, VLAN) 파트를 담당했습니다.
+개인 실습으로 CCIE 워크북 전체 랩(Bridging and Switching, IP IGP Protocols, IOS Feature/Security)을 먼저 진행했고, 이후 4인 팀 프로젝트에서는 Bridging and Switching(VTP, Trunk, EtherChannel, MST, VLAN) 파트를 담당했습니다.
 
 ![물리적 구성도](diagrams/physical-topology.png)
 
