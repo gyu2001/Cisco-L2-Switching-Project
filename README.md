@@ -31,42 +31,50 @@
 ## 검증 결과
 
 ### VTP 도메인 전파 확인 (SW1)
-VTP Domain Name          : history.com
-VTP Operating Mode       : Server
-Number of existing VLANs : 14
+
+    VTP Domain Name          : history.com
+    VTP Operating Mode       : Server
+    Number of existing VLANs : 14
 
 ### VLAN 할당 확인 (SW1)
-VLAN  Name                        Status    Ports
-1     default                     active    Fa0/1, Fa1/0, Fa1/1, Fa1/3
-11    BB1                         active    Et0/0, Et2/0
-21    VLAN_A                      active
-22    VLAN_B                      active    Et0/2
-100   VLAN_SWITCH                 active
+
+    VLAN  Name                        Status    Ports
+    1     default                     active    Fa0/1, Fa1/0, Fa1/1, Fa1/3
+    11    BB1                         active    Et0/0, Et2/0
+    21    VLAN_A                      active
+    22    VLAN_B                      active    Et0/2
+    100   VLAN_SWITCH                 active
 
 ### EtherChannel 그룹 확인 (SW1)
-Group  Port-channel  Protocol  Ports
-------+-------------+---------+-------------------
-12     Po12(SU)      -         Et3/0(P) Et3/1(P)
-13     Po13(SU)      -         Et3/2(P) Et3/3(P)
+
+    Group  Port-channel  Protocol  Ports
+    ------+-------------+---------+-------------------
+    12     Po12(SU)      -         Et3/0(P) Et3/1(P)
+    13     Po13(SU)      -         Et3/2(P) Et3/3(P)
 
 ### MST 인스턴스 및 루트 확인 (SW1)
-Name      [HISTORY]
-Revision  1    Instances configured 4
-Instance  Vlans mapped
-0         1-10,13-20,22-99,101-4094
-1         11,21
-2         100
-3         12
+
+    Name      [HISTORY]
+    Revision  1    Instances configured 4
+    Instance  Vlans mapped
+    0         1-10,13-20,22-99,101-4094
+    1         11,21
+    2         100
+    3         12
 
 `SW1#show spanning-tree vlan 11` — MST1 Root ID가 SW1 자신의 Bridge ID와 일치, "This bridge is the root" 확인
 
 ### MAC Address Table Aging Time 확인 (SW3)
-Global Aging Time: 300
-Vlan   Aging Time: 13500
+
+    Global Aging Time: 300
+    Vlan   Aging Time
+    ----   ----------
+    13     500
 
 ### SVI(VLAN 100) 인터페이스 정상 동작 확인 (SW1)
-Interface   IP-Address    OK? Method Status  Protocol
-Vlan100     14.14.90.1    YES manual up      up
+
+    Interface   IP-Address    OK? Method Status  Protocol
+    Vlan100     14.14.90.1    YES manual up      up
 
 ---
 
