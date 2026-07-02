@@ -43,7 +43,7 @@
     11    BB1                         active    Et0/0, Et2/0
     21    VLAN_A                      active
     22    VLAN_B                      active    Et0/2
-    100   VLAN_SWITCH                 active
+    100   VLAN_SWITCHS                active
 
 ### EtherChannel 그룹 확인 (SW1)
 
